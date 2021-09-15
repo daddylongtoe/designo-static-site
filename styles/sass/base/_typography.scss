@@ -1,0 +1,62 @@
+@use '../abstracts' as *;
+
+/* TYPOGRAPHY */
+
+// font family
+// jost
+
+// headings
+h1,
+.h1 {
+  font-family: 'Jost', sans-serif;
+  font-weight: 500;
+  font-size: clamp(2rem, 6.25vw, 3rem); //32px -> 48px;
+  line-height: clamp(2.25rem, 6.25vw, 3rem); //32px -> 48px;
+  color: $black;
+}
+h2,
+.h2 {
+  font-family: 'Jost', sans-serif;
+  font-weight: 500;
+  font-size: clamp(2rem, 5.2vw, 2.5rem); //28px -> 40px;
+  line-height: clamp(2.25rem, 6.25vw, 3rem); //36px -> 48px;
+  letter-spacing: $black;
+}
+h3,
+.h3 {
+  font-family: 'Jost', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: $dark-grey;
+}
+
+// body
+body,
+.body {
+  font-family: 'Jost', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: clamp(0.94rem, 2vw, 1rem); //15px -> 16px;
+  line-height: clamp(1.5625rem, 4.5vw, 1.625rem); // 25px -> 26px;
+  color: $dark-grey;
+}
+
+a,
+a:active,
+a:visited,
+a:focus {
+  color: $dark-grey;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// utilities
+.text-bold {
+  font-weight: bold;
+}

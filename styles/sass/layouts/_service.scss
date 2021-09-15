@@ -1,0 +1,131 @@
+@use 'sass:math';
+@use 'base' as *;
+@use 'components' as *;
+@use 'abstracts' as *;
+
+/* SERVICES PAGES STYLES */
+
+// Header
+.service-header {
+  &__section {
+    &.container {
+      padding: 0;
+    }
+  }
+
+  margin-bottom: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 20rem;
+  height: 100%;
+  width: 100%;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+    background-image: url('../../../assets/shared/desktop/bg-pattern-small-circle.svg');
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 18rem;
+  }
+
+  &__content {
+    z-index: 1;
+    text-align: center;
+  }
+
+  &__title {
+    margin-inline: auto;
+    max-width: 18ch;
+    padding-bottom: 0.78125em;
+  }
+  &__text {
+    margin-inline: auto;
+    max-width: 50ch;
+    padding-bottom: 1.5625em;
+  }
+
+  @include md {
+    min-height: 15.75rem;
+    margin-bottom: 3.75em;
+
+    &::before {
+      background-image: url('../../../assets/shared/tablet/bg-pattern-design-pages-intro-tablet.svg');
+      background-position: left center;
+      background-size: 55rem;
+    }
+
+    &__section {
+      border-radius: 15px;
+    }
+  }
+  @include xl {
+    margin-bottom: 5rem;
+
+    &::before {
+      background-image: url('../../../assets/shared/tablet/bg-pattern-design-pages-intro-tablet.svg');
+      background-position: right center;
+    }
+  }
+}
+
+// Projects
+.projects {
+  &__section {
+    padding-block: 3.75rem;
+  }
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5em;
+
+  @include xl {
+    &__section {
+      padding-block: 5rem;
+    }
+
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.project-card {
+  @include project-card();
+}
+
+// Services
+.services {
+  &__section {
+    padding-block: 3.75rem;
+  }
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  width: 100%;
+
+  @include xl {
+    &__section {
+      padding-block: 5rem;
+    }
+    flex-direction: row;
+    gap: 2em;
+  }
+}
+
+#web-design {
+  @include service-tile('../../assets/home/desktop/image-web-design-large.jpg');
+}
+#app-design {
+  @include service-tile('../../assets/home/desktop/image-app-design.jpg');
+}
+#graphic-design {
+  @include service-tile('../../assets/home/desktop/image-graphic-design.jpg');
+}

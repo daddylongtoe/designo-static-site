@@ -1,0 +1,141 @@
+@use 'abstracts' as *;
+
+.locations {
+  &__section {
+    &.container {
+      padding-inline: 0;
+    }
+    padding-bottom: 3.75rem;
+  }
+  display: flex;
+  flex-direction: column;
+  gap: 2.5em;
+
+  &__map {
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: right;
+      min-height: 20rem;
+    }
+  }
+  &__details {
+    min-height: 24.625rem;
+    background-color: #fdf3f0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5em;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      background-image: url('../../../assets/shared/desktop/bg-pattern-three-circles.svg');
+      background-repeat: no-repeat;
+      background-position: left top;
+      background-size: 38rem;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: inherit;
+  }
+  &__title {
+    color: $peach;
+  }
+
+  &__contact-address,
+  &__contact-details {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @include md {
+    &__section {
+      margin-top: 0;
+    }
+    gap: 120px;
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      & > *,
+      img {
+        border-radius: 1rem;
+      }
+    }
+
+    &__map {
+      img {
+        min-height: 20.375rem;
+      }
+    }
+
+    &__details {
+      min-height: 20.375rem;
+      padding-left: 90px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 2.5em;
+
+      &::before {
+        background-position: left bottom;
+      }
+    }
+
+    &__info {
+      flex-direction: row;
+      text-align: left;
+      gap: inherit;
+    }
+
+    &__contact-address,
+    &__contact-details {
+      min-width: 255px;
+    }
+  }
+
+  @include xl {
+    gap: 1.875rem;
+
+    &__details {
+      min-width: 730px;
+      height: 100%;
+
+      &::before {
+        background-position: left bottom;
+      }
+    }
+
+    &__map {
+      img {
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+
+    &__item {
+      &--map-left {
+        flex-direction: row;
+      }
+      &--map-right {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+}

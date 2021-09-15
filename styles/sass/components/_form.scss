@@ -1,0 +1,70 @@
+@use 'abstracts' as *;
+
+.form {
+  max-width: 573px;
+  width: 100%;
+  & ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+
+    & li {
+      position: relative;
+
+      & label {
+        opacity: 0.6;
+        display: block;
+        text-align: left;
+        padding: 5px 14px;
+        position: absolute;
+        top: 0;
+        transition: all 0.2s ease;
+      }
+
+      & textarea {
+        min-height: 102px;
+      }
+
+      & input,
+      textarea {
+        color: $white;
+        width: 100%;
+        border: none;
+        background-color: transparent;
+        padding: 6px 14px;
+        margin-bottom: 1.5rem;
+        border-bottom: 1px solid rgba($white, 0.6);
+
+        &:focus,
+        &:not(:placeholder-shown) {
+          outline: none;
+          border-color: transparent;
+          box-shadow: inset 0 -3px 0 0 $white;
+
+          & + label {
+            font-size: 12px;
+            transform: translateY(-1.5rem);
+          }
+        }
+      }
+      & button {
+        margin-top: 2.5rem;
+      }
+    }
+  }
+
+  @include md {
+    & ul {
+      & > :last-child {
+        align-self: flex-end;
+      }
+    }
+  }
+
+  @include xl {
+    & ul li button {
+      margin-top: 0;
+    }
+  }
+}

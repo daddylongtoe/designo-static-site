@@ -1,0 +1,33 @@
+@use '../abstracts/' as *;
+
+/* BUTTONS */
+@mixin btn() {
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-block;
+  min-width: 9.5rem;
+  padding: 1em 1.56em;
+  border: none;
+  border-radius: 0.5em;
+  transition: all 0.2s ease;
+
+  &:hover {
+    color: $white;
+    background-color: $light-peach;
+  }
+}
+
+.btn-primary {
+  @include btn();
+  color: #333;
+  background-color: $white;
+}
+
+.btn-secondary {
+  @include btn();
+  color: $white;
+  background-color: $peach;
+}

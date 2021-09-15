@@ -1,0 +1,60 @@
+@use 'sass:math';
+@use 'abstracts' as *;
+
+@mixin project-card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 1em;
+  overflow: hidden;
+
+  &__details {
+    width: 100%;
+    background-color: #fdf3f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    padding: 2em 1em;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      background-color: $peach;
+      color: $white;
+      cursor: pointer;
+
+      h3 {
+        color: $white;
+      }
+    }
+  }
+
+  &__title {
+    color: $peach;
+    transition: all 0.2s ease-in-out;
+  }
+
+  &__text {
+    max-width: 30ch;
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  @include md {
+    flex-direction: row;
+
+    &__image {
+      width: 50%;
+    }
+  }
+
+  @include xl {
+    flex-direction: column;
+    &__image {
+      width: 100%;
+    }
+  }
+}

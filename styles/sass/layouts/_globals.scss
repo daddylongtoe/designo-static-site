@@ -1,0 +1,23 @@
+@use 'abstracts' as *;
+
+// base layout classes
+.container {
+  width: 100%;
+  // max-width: 1150px;
+  margin-inline: auto;
+  padding-inline: max(24px, 3.8vw);
+  box-sizing: border-box;
+
+  @include md {
+    max-width: 689px;
+    padding-inline: 0px;
+  }
+
+  @include xl {
+    max-width: 1110px;
+  }
+}
+
+body {
+  overflow-y: scroll;
+}

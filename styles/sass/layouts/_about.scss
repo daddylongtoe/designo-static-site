@@ -1,0 +1,265 @@
+@use 'sass:math';
+@use 'base' as *;
+@use 'components' as *;
+@use 'abstracts' as *;
+
+/* ABOUT PAGE STYLES */
+
+// Header
+.about-header {
+  &__section {
+    margin-bottom: -3.75rem;
+    &.container {
+      padding: 0;
+    }
+  }
+
+  display: flex;
+  flex-direction: column-reverse;
+  background-color: $peach;
+
+  &__content {
+    min-height: 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.875rem;
+    text-align: center;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: -1;
+
+      background-image: url('../../../assets/shared/desktop/bg-pattern-small-circle.svg');
+      background-repeat: no-repeat;
+      background-position: bottom 14rem right 1vw;
+      background-size: 72.5vw;
+    }
+  }
+
+  &__title {
+    text-transform: capitalize;
+    max-width: 18ch;
+  }
+  &__text {
+    max-width: 50ch;
+  }
+
+  &__image img {
+    width: 100%;
+  }
+
+  @include md {
+    &__section {
+      margin-bottom: 3.75em;
+    }
+
+    min-height: 39.5rem;
+
+    &__content {
+      min-height: 312px;
+
+      &::before {
+        background-position: bottom 6rem left 12rem;
+        background-size: 34rem;
+        transform: skewX(-1);
+      }
+    }
+
+    &__text {
+      max-width: 59ch;
+    }
+
+    &__section {
+      border-radius: 15px;
+      overflow: hidden;
+    }
+  }
+
+  @include xl {
+    &__section {
+      margin-bottom: 5em;
+    }
+
+    min-height: 30em;
+    height: 100%;
+    flex-direction: row;
+    padding-left: 90px;
+
+    &__content {
+      align-items: flex-start;
+      text-align: left;
+      z-index: 1;
+    }
+
+    &__text {
+      max-width: 50ch;
+    }
+
+    &__image img {
+      min-width: 476px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}
+
+// Image Text Blocks
+.image-text {
+  &__section {
+    padding-block: 3.75rem;
+
+    &.container {
+      padding-inline: 0;
+    }
+  }
+
+  display: flex;
+  flex-direction: column-reverse;
+  background-color: #fdf3f0;
+
+  &__content {
+    min-height: 34rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1.875em;
+    position: relative;
+    padding-block: 1.25em;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      background-image: url('../../../assets/shared/desktop/bg-pattern-three-circles.svg');
+      background-repeat: no-repeat;
+      background-position: left top;
+      background-size: 40rem;
+    }
+  }
+
+  &__title {
+    color: $peach;
+  }
+
+  &__text {
+    max-width: 58ch;
+  }
+
+  &__image img {
+    width: 100%;
+  }
+
+  @include md {
+    border-radius: 1em;
+    overflow: hidden;
+
+    &__content {
+      min-height: 26rem;
+
+      &::before {
+        background-position: right 1rem bottom 2rem;
+        background-size: 40rem;
+      }
+    }
+  }
+
+  @include xl {
+    &__section {
+      padding-block: 5rem;
+    }
+
+    &--image-left {
+      flex-direction: row-reverse;
+
+      & > div::before {
+        background-position: right 15rem bottom;
+      }
+    }
+    &--image-right {
+      flex-direction: row;
+
+      & > div::before {
+        background-position: right top -16.5rem;
+        transform: rotate(180deg);
+      }
+    }
+
+    &__content {
+      min-height: 640px;
+
+      justify-content: center;
+      align-items: flex-start;
+      text-align: left;
+      z-index: 1;
+
+      & > * {
+        padding-left: 90px;
+      }
+
+      &::before {
+        background-size: 33rem;
+      }
+    }
+
+    &__text {
+      max-width: 56ch;
+    }
+
+    &__image img {
+      min-width: 476px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}
+
+// Location
+.location-icons {
+  &__section {
+    padding-block: 3.75rem;
+  }
+
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+
+  @include md {
+    gap: 3em;
+  }
+
+  @include xl {
+    &__section {
+      padding-block: 5rem;
+    }
+    flex-direction: row;
+    align-items: center;
+    gap: 2em;
+
+    &__image {
+      height: 100%;
+    }
+  }
+}
+
+.location-icon {
+  @include icon-cta();
+}

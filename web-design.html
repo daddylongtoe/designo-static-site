@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,500;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/css/index.css" />
+
+    <title>Frontend Mentor | Designo Agency Website Challenge</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar__container">
+        <a href="/"
+          ><img
+            src="./assets/shared/desktop/logo-dark.png"
+            alt="logo"
+            class="navbar__logo"
+        /></a>
+        <div class="navbar__menu-icon">
+          <img
+            src="./assets/shared/mobile/icon-hamburger.svg"
+            alt="Hamburger menu icon"
+            class="navbar__menu-icon--hamburger"
+          />
+          <img
+            src="./assets/shared/mobile/icon-close.svg"
+            alt="Menu close icon"
+            class="navbar__menu-icon--close"
+          />
+        </div>
+        <div class="navbar__menu">
+          <ul>
+            <li><a href="/about.html">Our Company</a></li>
+            <li><a href="/locations.html">Locations</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="service-header__section bg-peach container">
+      <div class="service-header container text-white">
+        <div class="service-header__content">
+          <h1 class="service-header__title text-white">Web Design</h1>
+          <p class="service-header__text">
+            We build websites that serve as powerful marketing tools and bring
+            memorable brand experiences.
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <section class="projects__section">
+      <div class="projects container">
+        <div class="project-card">
+          <img
+            src="./assets/web-design/desktop/image-express.jpg"
+            alt="3 HGVs on the road"
+            class="project-card__image"
+          />
+          <div class="project-card__details">
+            <h3 class="project-card__title">Express</h3>
+            <p class="project-card__text">
+              A multi-carrier shipping website for ecommerce businesses
+            </p>
+          </div>
+        </div>
+        <div class="project-card">
+          <img
+            src="./assets/web-design/desktop/image-transfer.jpg"
+            alt="Landing page screenshot"
+            class="project-card__image"
+          />
+          <div class="project-card__details">
+            <h3 class="project-card__title">Transfer</h3>
+            <p class="project-card__text">
+              Site for low-cost money transfers and sending money within seconds
+            </p>
+          </div>
+        </div>
+        <div class="project-card">
+          <img
+            src="./assets/web-design/desktop/image-photon.jpg"
+            alt="Landing page screenshot"
+            class="project-card__image"
+          />
+          <div class="project-card__details">
+            <h3 class="project-card__title">Photon</h3>
+            <p class="project-card__text">
+              A state-of-the-art music player with high-resolution audio and DSP
+              effects
+            </p>
+          </div>
+        </div>
+        <div class="project-card">
+          <img
+            src="./assets/web-design/desktop/image-builder.jpg"
+            alt="Landing page screenshot"
+            class="project-card__image"
+          />
+          <div class="project-card__details">
+            <h3 class="project-card__title">Builder</h3>
+            <p class="project-card__text">
+              Connects users with local contractors based on their location
+            </p>
+          </div>
+        </div>
+        <div class="project-card">
+          <img
+            src="./assets/web-design/desktop/image-blogr.jpg"
+            alt="Landing page screenshot"
+            class="project-card__image"
+          />
+          <div class="project-card__details">
+            <h3 class="project-card__title">Blogr</h3>
+            <p class="project-card__text">
+              Blogr is a platform for creating an online blog or publication
+            </p>
+          </div>
+        </div>
+        <div class="project-card">
+          <img
+            src="./assets/web-design/desktop/image-camp.jpg"
+            alt="Landing page screenshot"
+            class="project-card__image"
+          />
+          <div class="project-card__details">
+            <h3 class="project-card__title">Camp</h3>
+            <p class="project-card__text">
+              Get expert training in coding, data, design, and digital marketing
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services__section">
+      <div class="services container">
+        <div class="service-tile" id="app-design">
+          <a href="/app-design.html" class="service-tile__link">
+            <h2 class="service-tile__heading">App Design</h2>
+            <p>View Projects</p>
+          </a>
+        </div>
+        <div class="service-tile" id="graphic-design">
+          <a href="/graphic-design.html" class="service-tile__link">
+            <h2 class="service-tile__heading">Graphic Design</h2>
+            <p>View Projects</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact-section" class="container">
+      <div class="contact">
+        <div class="contact__content">
+          <h2 class="contact__title text-white">
+            Let’s talk about your project
+          </h2>
+          <p class="contact__text text-white">
+            Ready to take it to the next level? Contact us today and find out
+            how our expertise can help your business grow.
+          </p>
+        </div>
+        <div class="contact__cta">
+          <button
+            onclick="window.location.href='/contact.html';"
+            type="button"
+            class="contact__button btn-primary"
+          >
+            Get in touch
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__navigation">
+          <div class="footer__logo-container">
+            <a href="/"
+              ><img
+                src="./assets/shared/desktop/logo-light.png"
+                alt="Designo logo"
+                class="footer__logo"
+            /></a>
+          </div>
+          <ul>
+            <li><a href="/about.html">Our company</a></li>
+            <li><a href="/locations.html">Locations</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__info">
+          <div class="footer__details">
+            <p class="text-bold">Designo Central Office</p>
+            <p>3886 Wellington Street</p>
+            <p>Toronto, Ontario M9C 3J5</p>
+          </div>
+          <div class="footer__details">
+            <p class="text-bold">Contact Us (Central Office)</p>
+            <p>P : +1 253-863-8967</p>
+            <p>M : contact@designo.co</p>
+          </div>
+          <div class="social-icons">
+            <a href="https://facebook.com"
+              ><img
+                src="./assets/shared/desktop/icon-facebook.svg"
+                alt="facebook"
+            /></a>
+            <a href="https://youtube.com"
+              ><img
+                src="./assets/shared/desktop/icon-youtube.svg"
+                alt="youtune"
+            /></a>
+            <a href="https://twitter.com"
+              ><img
+                src="./assets/shared/desktop/icon-twitter.svg"
+                alt="twitter"
+            /></a>
+            <a href="https://pinterest.com"
+              ><img
+                src="./assets/shared/desktop/icon-pinterest.svg"
+                alt="pinterest"
+            /></a>
+            <a href="https://instagram.com"
+              ><img
+                src="./assets/shared/desktop/icon-instagram.svg"
+                alt="instagram"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
