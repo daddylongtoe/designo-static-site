@@ -1,9 +1,13 @@
 @use 'abstracts' as *;
 
 // base layout classes
+.content-wrapper {
+  overflow-x: hidden;
+  position: relative;
+}
+
 .container {
   width: 100%;
-  // max-width: 1150px;
   margin-inline: auto;
   padding-inline: max(24px, 3.8vw);
   box-sizing: border-box;

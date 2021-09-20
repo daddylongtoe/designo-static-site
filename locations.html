@@ -15,234 +15,239 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles/css/index.css" />
+    <script src="./js/main.js" defer></script>
 
     <title>Frontend Mentor | Designo Agency Website Challenge</title>
   </head>
   <body>
-    <nav class="navbar">
-      <div class="navbar__container">
-        <a href="/"
-          ><img
-            src="./assets/shared/desktop/logo-dark.png"
-            alt="logo"
-            class="navbar__logo"
-        /></a>
-        <div class="navbar__menu-icon">
-          <img
-            src="./assets/shared/mobile/icon-hamburger.svg"
-            alt="Hamburger menu icon"
-            class="navbar__menu-icon--hamburger"
-          />
-          <img
-            src="./assets/shared/mobile/icon-close.svg"
-            alt="Menu close icon"
-            class="navbar__menu-icon--close"
-          />
+    <div class="content-wrapper">
+      <nav class="navbar">
+        <div class="navbar__container">
+          <a href="/"
+            ><img
+              src="./assets/shared/desktop/logo-dark.png"
+              alt="logo"
+              class="navbar__logo"
+          /></a>
+          <div class="navbar__menu-icon">
+            <img
+              src="./assets/shared/mobile/icon-hamburger.svg"
+              alt="Hamburger menu icon"
+              class="navbar__menu-icon-item navbar__menu-icon-item--active"
+            />
+            <img
+              src="./assets/shared/mobile/icon-close.svg"
+              alt="Menu close icon"
+              class="navbar__menu-icon-item"
+            />
+          </div>
+          <div class="navbar__menu">
+            <ul>
+              <li><a href="/about.html">Our Company</a></li>
+              <li><a href="/locations.html">Locations</a></li>
+              <li><a href="/contact.html">Contact</a></li>
+            </ul>
+          </div>
         </div>
-        <div class="navbar__menu">
-          <ul>
-            <li><a href="/about.html">Our Company</a></li>
-            <li><a href="/locations.html">Locations</a></li>
-            <li><a href="/contact.html">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+      </nav>
 
-    <section class="locations__section container">
-      <div class="locations">
-        <div class="locations__item locations__item--map-right" id="canada">
-          <div class="locations__map">
-            <picture>
-              <source
-                srcset="./assets/locations/tablet/image-map-canada.png"
-                type="image/png"
-                media="all and (max-width:1199px)"
-              />
-              <source
-                srcset="./assets/locations/desktop/image-map-canada.png"
-                type="image/png"
-                media="all and (min-width:1200px)"
-              />
-              <img
-                src="./assets/locations/tablet/image-map-canada.png"
-                alt="map of office location"
-              />
-            </picture>
-          </div>
-          <div class="locations__details">
-            <h2 class="locations__title">Canada</h2>
-            <div class="locations__info">
-              <div class="locations__contact-address">
-                <p class="text-bold">Designo Central Office</p>
-                <p>3886 Wellington Street</p>
-                <p>Toronto, Ontario M9C 3J5</p>
-              </div>
-              <div class="locations__contact-details">
-                <p class="text-bold">Contact</p>
-                <a href="tel:+1 253-863-8967">P: +1 253-863-8967</a>
-                <a href="mailto: contact@designo.co">M: contact@designo.co</a>
+      <section class="locations__section container">
+        <div class="locations">
+          <div class="locations__item locations__item--map-right" id="canada">
+            <div class="locations__map">
+              <picture>
+                <source
+                  srcset="./assets/locations/tablet/image-map-canada.png"
+                  type="image/png"
+                  media="all and (max-width:1199px)"
+                />
+                <source
+                  srcset="./assets/locations/desktop/image-map-canada.png"
+                  type="image/png"
+                  media="all and (min-width:1200px)"
+                />
+                <img
+                  src="./assets/locations/tablet/image-map-canada.png"
+                  alt="map of office location"
+                />
+              </picture>
+            </div>
+            <div class="locations__details">
+              <h2 class="locations__title">Canada</h2>
+              <div class="locations__info">
+                <div class="locations__contact-address">
+                  <p class="text-bold">Designo Central Office</p>
+                  <p>3886 Wellington Street</p>
+                  <p>Toronto, Ontario M9C 3J5</p>
+                </div>
+                <div class="locations__contact-details">
+                  <p class="text-bold">Contact</p>
+                  <a href="tel:+1 253-863-8967">P: +1 253-863-8967</a>
+                  <a href="mailto: contact@designo.co">M: contact@designo.co</a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="locations__item locations__item--map-left" id="australia">
-          <div class="locations__map">
-            <picture>
-              <source
-                srcset="./assets/locations/tablet/image-map-australia.png"
-                type="image/png"
-                media="all and (max-width:1199px)"
-              />
-              <source
-                srcset="./assets/locations/desktop/image-map-australia.png"
-                type="image/png"
-                media="all and (min-width:1200px)"
-              />
-              <img
-                src="./assets/locations/tablet/image-map-australia.png"
-                alt="map of office location"
-              />
-            </picture>
-          </div>
-          <div class="locations__details">
-            <h2 class="locations__title">Australia</h2>
-            <div class="locations__info">
-              <div class="locations__contact-address">
-                <p class="text-bold">Designo AU Office</p>
-                <p>19 Balonne Street</p>
-                <p>New South Wales 2443</p>
-              </div>
-              <div class="locations__contact-details">
-                <p class="text-bold">Contact</p>
-                <a href="tel:(02) 6720 9092">P: (02) 6720 9092</a>
-                <a href="mailto: contact@designo.au">M: contact@designo.au</a>
+          <div class="locations__item locations__item--map-left" id="australia">
+            <div class="locations__map">
+              <picture>
+                <source
+                  srcset="./assets/locations/tablet/image-map-australia.png"
+                  type="image/png"
+                  media="all and (max-width:1199px)"
+                />
+                <source
+                  srcset="./assets/locations/desktop/image-map-australia.png"
+                  type="image/png"
+                  media="all and (min-width:1200px)"
+                />
+                <img
+                  src="./assets/locations/tablet/image-map-australia.png"
+                  alt="map of office location"
+                />
+              </picture>
+            </div>
+            <div class="locations__details">
+              <h2 class="locations__title">Australia</h2>
+              <div class="locations__info">
+                <div class="locations__contact-address">
+                  <p class="text-bold">Designo AU Office</p>
+                  <p>19 Balonne Street</p>
+                  <p>New South Wales 2443</p>
+                </div>
+                <div class="locations__contact-details">
+                  <p class="text-bold">Contact</p>
+                  <a href="tel:(02) 6720 9092">P: (02) 6720 9092</a>
+                  <a href="mailto: contact@designo.au">M: contact@designo.au</a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div
-          class="locations__item locations__item--map-right"
-          id="united-kingdom"
-        >
-          <div class="locations__map">
-            <picture>
-              <source
-                srcset="./assets/locations/tablet/image-map-uk.png"
-                type="image/png"
-                media="all and (max-width:1199px)"
-              />
-              <source
-                srcset="./assets/locations/desktop/image-map-united-kingdom.png"
-                type="image/png"
-                media="all and (min-width:1200px)"
-              />
-              <img
-                src="./assets/locations/tablet/image-map-uk.png"
-                alt="map of office location"
-              />
-            </picture>
-          </div>
-          <div class="locations__details">
-            <h2 class="locations__title">United Kingdom</h2>
-            <div class="locations__info">
-              <div class="locations__contact-address">
-                <p class="text-bold">Designo UK Office</p>
-                <p>13 Colorado Way</p>
-                <p>Rhyd-y-fro SA8 9GA</p>
-              </div>
-              <div class="locations__contact-details">
-                <p class="text-bold">Contact</p>
-                <a href="tel:078 3115 1400">P: 078 3115 1400</a>
-                <a href="mailto: contact@designo.uk">M: contact@designo.uk</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact-section" class="container">
-      <div class="contact">
-        <div class="contact__content">
-          <h2 class="contact__title text-white">
-            Let’s talk about your project
-          </h2>
-          <p class="contact__text text-white">
-            Ready to take it to the next level? Contact us today and find out
-            how our expertise can help your business grow.
-          </p>
-        </div>
-        <div class="contact__cta">
-          <button
-            onclick="window.location.href='/contact.html';"
-            type="button"
-            class="contact__button btn-primary"
+          <div
+            class="locations__item locations__item--map-right"
+            id="united-kingdom"
           >
-            Get in touch
-          </button>
+            <div class="locations__map">
+              <picture>
+                <source
+                  srcset="./assets/locations/tablet/image-map-uk.png"
+                  type="image/png"
+                  media="all and (max-width:1199px)"
+                />
+                <source
+                  srcset="
+                    ./assets/locations/desktop/image-map-united-kingdom.png
+                  "
+                  type="image/png"
+                  media="all and (min-width:1200px)"
+                />
+                <img
+                  src="./assets/locations/tablet/image-map-uk.png"
+                  alt="map of office location"
+                />
+              </picture>
+            </div>
+            <div class="locations__details">
+              <h2 class="locations__title">United Kingdom</h2>
+              <div class="locations__info">
+                <div class="locations__contact-address">
+                  <p class="text-bold">Designo UK Office</p>
+                  <p>13 Colorado Way</p>
+                  <p>Rhyd-y-fro SA8 9GA</p>
+                </div>
+                <div class="locations__contact-details">
+                  <p class="text-bold">Contact</p>
+                  <a href="tel:078 3115 1400">P: 078 3115 1400</a>
+                  <a href="mailto: contact@designo.uk">M: contact@designo.uk</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <footer class="footer">
-      <div class="container">
-        <div class="footer__navigation">
-          <div class="footer__logo-container">
-            <a href="/"
-              ><img
-                src="./assets/shared/desktop/logo-light.png"
-                alt="Designo logo"
-                class="footer__logo"
-            /></a>
+      <section id="contact-section" class="container">
+        <div class="contact">
+          <div class="contact__content">
+            <h2 class="contact__title text-white">
+              Let’s talk about your project
+            </h2>
+            <p class="contact__text text-white">
+              Ready to take it to the next level? Contact us today and find out
+              how our expertise can help your business grow.
+            </p>
           </div>
-          <ul>
-            <li><a href="/about.html">Our company</a></li>
-            <li><a href="/locations.html">Locations</a></li>
-            <li><a href="/contact.html">Contact</a></li>
-          </ul>
+          <div class="contact__cta">
+            <button
+              onclick="window.location.href='/contact.html';"
+              type="button"
+              class="contact__button btn-primary"
+            >
+              Get in touch
+            </button>
+          </div>
         </div>
+      </section>
 
-        <div class="footer__info">
-          <div class="footer__details">
-            <p class="text-bold">Designo Central Office</p>
-            <p>3886 Wellington Street</p>
-            <p>Toronto, Ontario M9C 3J5</p>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__navigation">
+            <div class="footer__logo-container">
+              <a href="/"
+                ><img
+                  src="./assets/shared/desktop/logo-light.png"
+                  alt="Designo logo"
+                  class="footer__logo"
+              /></a>
+            </div>
+            <ul>
+              <li><a href="/about.html">Our company</a></li>
+              <li><a href="/locations.html">Locations</a></li>
+              <li><a href="/contact.html">Contact</a></li>
+            </ul>
           </div>
-          <div class="footer__details">
-            <p class="text-bold">Contact Us (Central Office)</p>
-            <p>P : +1 253-863-8967</p>
-            <p>M : contact@designo.co</p>
-          </div>
-          <div class="social-icons">
-            <a href="https://facebook.com"
-              ><img
-                src="./assets/shared/desktop/icon-facebook.svg"
-                alt="facebook"
-            /></a>
-            <a href="https://youtube.com"
-              ><img
-                src="./assets/shared/desktop/icon-youtube.svg"
-                alt="youtune"
-            /></a>
-            <a href="https://twitter.com"
-              ><img
-                src="./assets/shared/desktop/icon-twitter.svg"
-                alt="twitter"
-            /></a>
-            <a href="https://pinterest.com"
-              ><img
-                src="./assets/shared/desktop/icon-pinterest.svg"
-                alt="pinterest"
-            /></a>
-            <a href="https://instagram.com"
-              ><img
-                src="./assets/shared/desktop/icon-instagram.svg"
-                alt="instagram"
-            /></a>
+
+          <div class="footer__info">
+            <div class="footer__details">
+              <p class="text-bold">Designo Central Office</p>
+              <p>3886 Wellington Street</p>
+              <p>Toronto, Ontario M9C 3J5</p>
+            </div>
+            <div class="footer__details">
+              <p class="text-bold">Contact Us (Central Office)</p>
+              <p>P : +1 253-863-8967</p>
+              <p>M : contact@designo.co</p>
+            </div>
+            <div class="social-icons">
+              <a href="https://facebook.com"
+                ><img
+                  src="./assets/shared/desktop/icon-facebook.svg"
+                  alt="facebook"
+              /></a>
+              <a href="https://youtube.com"
+                ><img
+                  src="./assets/shared/desktop/icon-youtube.svg"
+                  alt="youtune"
+              /></a>
+              <a href="https://twitter.com"
+                ><img
+                  src="./assets/shared/desktop/icon-twitter.svg"
+                  alt="twitter"
+              /></a>
+              <a href="https://pinterest.com"
+                ><img
+                  src="./assets/shared/desktop/icon-pinterest.svg"
+                  alt="pinterest"
+              /></a>
+              <a href="https://instagram.com"
+                ><img
+                  src="./assets/shared/desktop/icon-instagram.svg"
+                  alt="instagram"
+              /></a>
+            </div>
           </div>
         </div>
-      </div>
-    </footer>
+      </footer>
+    </div>
   </body>
 </html>

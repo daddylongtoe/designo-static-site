@@ -11,6 +11,8 @@
 .navbar {
   @extend %flex-layout;
   min-height: 6rem;
+  z-index: 10;
+  background-color: $white;
 
   &__container {
     @extend %flex-layout;
@@ -26,33 +28,54 @@
   }
 
   &__menu {
-    display: none;
+    position: absolute;
+    top: 6rem;
+    left: 100%;
+    background-color: black;
+    width: 100%;
+    z-index: 5;
+    padding: max(48px, 3.8vw) max(24px, 3.8vw);
+    transition: left 0.3s ease-in-out;
+
+    &--open {
+      left: 0;
+    }
   }
 
   &__menu-icon {
     display: block;
-    &--active {
-      display: block;
-    }
-    &--close {
+    &-item {
       display: none;
+      &--active {
+        display: block;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
     }
   }
 
   & ul {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     gap: 40px;
     list-style: none;
+    padding: 0;
+    margin: 0;
 
     & a,
     a:active,
     a:visited,
     a:focus {
+      color: $white;
       text-decoration: none;
       text-transform: uppercase;
-      font-size: 14px;
+      font-size: 24px;
+      line-height: 25px;
       letter-spacing: 2px;
+      text-align: left;
 
       &:hover {
         text-decoration: underline;
@@ -68,14 +91,33 @@
 
     &__menu {
       display: flex;
+      position: initial;
+      background-color: transparent;
+      width: auto;
+      padding: 0;
     }
 
     &__menu-icon {
+      display: none;
       &--hamburger {
         display: none;
       }
       &--close {
         display: none;
+      }
+    }
+
+    & ul {
+      flex-direction: row;
+      align-items: center;
+
+      & a,
+      a:active,
+      a:visited,
+      a:focus {
+        color: initial;
+        font-size: 14px;
+        text-align: center;
       }
     }
   }

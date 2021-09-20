@@ -8,6 +8,11 @@
   color: #fff;
 }
 
+.content-wrapper {
+  overflow-x: hidden;
+  position: relative;
+}
+
 .container {
   width: 100%;
   margin-inline: auto;
@@ -42,7 +47,11 @@ body,
 h1,
 h2,
 h3,
-p {
+h4,
+p,
+figure,
+dl,
+dd {
   margin: 0;
 }
 
@@ -75,7 +84,8 @@ picture {
 /* Inherit fonts for inputs and buttons */
 input,
 button,
-textarea {
+textarea,
+select {
   font: inherit;
 }
 
@@ -223,7 +233,10 @@ a:focus:hover {
 .form ul li input:-webkit-autofill:focus,
 .form ul li textarea:-webkit-autofill,
 .form ul li textarea:-webkit-autofill:hover,
-.form ul li textarea:-webkit-autofill:focus {
+.form ul li textarea:-webkit-autofill:focus,
+.form ul li select:-webkit-autofill,
+.form ul li select:-webkit-autofill:hover,
+.form ul li select:-webkit-autofill:focus {
   -webkit-text-fill-color: #fff;
   -webkit-box-shadow: 0 0 0px 1000px transparent inset;
   transition: background-color 5000s ease-in-out 0s;
@@ -361,6 +374,8 @@ a:focus:hover {
 
 .navbar {
   min-height: 6rem;
+  z-index: 10;
+  background-color: #fff;
 }
 .navbar__container {
   margin-inline: auto;
@@ -373,28 +388,50 @@ a:focus:hover {
   align-items: center;
 }
 .navbar__menu {
-  display: none;
+  position: absolute;
+  top: 6rem;
+  left: 100%;
+  background-color: black;
+  width: 100%;
+  z-index: 5;
+  padding: max(48px, 3.8vw) max(24px, 3.8vw);
+  transition: left 0.3s ease-in-out;
+}
+.navbar__menu--open {
+  left: 0;
 }
 .navbar__menu-icon {
   display: block;
 }
-.navbar__menu-icon--close {
+.navbar__menu-icon-item {
   display: none;
+}
+.navbar__menu-icon-item--active {
+  display: block;
+}
+.navbar__menu-icon:hover {
+  cursor: pointer;
 }
 .navbar ul {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   gap: 40px;
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 .navbar ul a,
 .navbar ul a:active,
 .navbar ul a:visited,
 .navbar ul a:focus {
+  color: #fff;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 24px;
+  line-height: 25px;
   letter-spacing: 2px;
+  text-align: left;
 }
 .navbar ul a:hover,
 .navbar ul a:active:hover,
@@ -409,12 +446,25 @@ a:focus:hover {
   }
   .navbar__menu {
     display: flex;
+    position: initial;
+    background-color: transparent;
+    width: auto;
+    padding: 0;
   }
-  .navbar__menu-icon--hamburger {
+  .navbar__menu-icon {
     display: none;
   }
-  .navbar__menu-icon--close {
-    display: none;
+  .navbar ul {
+    flex-direction: row;
+    align-items: center;
+  }
+  .navbar ul a,
+.navbar ul a:active,
+.navbar ul a:visited,
+.navbar ul a:focus {
+    color: initial;
+    font-size: 14px;
+    text-align: center;
   }
 }
 @media (min-width: 1200px) {
